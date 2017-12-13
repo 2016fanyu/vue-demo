@@ -1,220 +1,226 @@
 <template>
-  <el-container class="container">
-    <el-aside style="width: 230px">
-      <el-col>
-        <el-menu
-          default-active="2"
-          class="el-menu-vertical-demo"
-          @open="handleOpen"
-          @close="handleClose"
-          background-color="#91a17d"
-          text-color="#fff">
-          <el-submenu index="1">
-            <template slot="title">
-              <i class="el-icon-menu"></i>
-              <span>导航一</span>
-            </template>
-            <el-menu-item index="1-1">选项1</el-menu-item>
-            <el-menu-item index="1-2">选项2</el-menu-item>
-            <el-menu-item index="1-3">选项3</el-menu-item>
-          </el-submenu>
-          <el-submenu index="2">
-            <template slot="title">
-              <i class="el-icon-menu"></i>
-              <span>导航二</span>
-            </template>
-            <el-menu-item index="2-1">选项1</el-menu-item>
-            <el-menu-item index="2-2">选项2</el-menu-item>
-          </el-submenu>
-          <el-submenu index="3">
-            <template slot="title">
-              <i class="el-icon-menu"></i>
-              <span>导航三</span>
-            </template>
-            <el-menu-item index="3-1">选项1</el-menu-item>
-          </el-submenu>
-        </el-menu>
-      </el-col>
-    </el-aside>
-    <el-main>
-      <el-breadcrumb separator-class="el-icon-arrow-right">
-        <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
-        <el-breadcrumb-item>活动管理</el-breadcrumb-item>
-        <el-breadcrumb-item>活动列表</el-breadcrumb-item>
-        <el-breadcrumb-item>活动详情</el-breadcrumb-item>
-      </el-breadcrumb>
-      <el-row>
-        <el-col class="title">
-          jQuery([selector,[context]])
-          <span>返回值:Boolean</span>
-        </el-col>
-        <el-col class="summary">
-          概述
-        </el-col>
-        <el-col class="summary_content">
-          <p>内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内</p>
-          <p>属性值。引号在大多数情况下是可选的。但在遇到诸如属性值包含"]"时，用以避免冲突。</p>
-          <p>容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内</p>
-          <p>容内容内容内容内容内容内容内容内容内容</p>
-        </el-col>
-        <el-col class="summary">
-          参数
-        </el-col>
-        <el-col class="summary_param">
-          <div class="clearfix">
-            <span>value</span>
-            <span>String</span>
-            <span>v1.0</span>
-          </div>
+  <mt-swipe :auto="0"  @change="handleChange">
+    <mt-swipe-item>
+      <div class="photo photo-animate"><img src="./assets/logo.jpg" alt=""></div>
+      <div class="title photo-animate"><h2>前端工程师一枚</h2></div>
+      <div class="name photo-animate"><h2>范瑜</h2></div>
+    </mt-swipe-item>
+    <mt-swipe-item>
+      <div class="title photo-animate"><h1>基本信息</h1></div>
+      <div class="illustration"><img src="./assets/information.png" alt=""></div>
+      <div class="discription character-animate">
+        <p><span>籍贯：</span>山西平遥</p>
+        <p><span>现居地：</span>上海</p>
+        <p><span>手机：</span>10000000000</p>
+        <p><span>邮箱：</span>111111111@qq.com</p>
+      </div>
+    </mt-swipe-item>
+    <mt-swipe-item>
+      <div class="title photo-animate"><h1>工作经历</h1></div>
+      <div class="illustration"><img src="./assets/work.png" alt=""></div>
+      <div class="discription character-animate">
+        <div class="one">
+          <span>1</span>
           <div>
-            属性值。引号在大多数情况下是可选的。但在遇到诸如属性值包含"]"时，用以避免冲突。
+            <p>2016.07-2017.06</p>
+            <p>上海XXXX公司</p>
           </div>
-        </el-col>
-        <el-col class="summary_param">
-          <div class="clearfix">
-            <span>value</span>
-            <span>String</span>
-            <span>v1.0</span>
-          </div>
+        </div>
+        <div class="two">
+          <span>2</span>
           <div>
-            属性值。引号在大多数情况下是可选的。但在遇到诸如属性值包含"]"时，用以避免冲突。
+            <p>2016.07-2017.06</p>
+            <p>上海XXXX公司</p>
           </div>
-        </el-col>
-        <el-col class="summary">
-          示例
-        </el-col>
-        <el-col class="summary_eg">
-          <div class="summary_eg_summary">描述</div>
-          <div>匹配表单中所有的子级input元素</div>
-          <div class="summary_eg_title">html代码</div>
-          <div class="summary_eg_block">2222</div>
-          <div class="summary_eg_title">jquery代码</div>
-          <div class="summary_eg_block">2222</div>
-          <div class="summary_eg_title">结果</div>
-          <div class="summary_eg_block">222</div>
-        </el-col>
-      </el-row>
-    </el-main>
-  </el-container>
+        </div>
+        <div class="three">
+          <span>3</span>
+          <div>
+            <p>2016.07-2017.06</p>
+            <p>上海XXXX公司</p>
+          </div>
+        </div>
+      </div>
+    </mt-swipe-item>
+  </mt-swipe>
 </template>
 
 <script>
+  import { Header, Swipe, SwipeItem } from 'mint-ui'
 export default {
-  methods: {
-    handleOpen (key, keyPath) {
-      console.log(key, keyPath)
+    component: {
+      Header,
+      Swipe,
+      SwipeItem
     },
-    handleClose (key, keyPath) {
-      console.log(key, keyPath)
+    methods: {
+      handleChange (index) {
+        console.log(index)
+      }
     }
-  }
 }
 </script>
 
 <style lang="scss" scoped>
   @import "./style/style";
-  .container {
-    height: 100%;
-    .el-aside {
-      background: $color-primary;
-      .el-submenu {
-        width: 230px;
+  .mint-swipe-item {
+    background: #00c4ff;
+    &:first-child{
+      background: url("./assets/bagOne.png") no-repeat;
+      background-size: cover;
+      .photo{
+        width: 6rem;
+        height: 6rem;
+        margin: 0 auto;
+        margin-top: 2rem;
+        border-radius: 50%;
+        overflow: hidden;
+        img{
+          width: 100%;
+        }
       }
-      .el-menu-vertical-demo{
-        height: 100%
-      }
-      .el-submenu__title i{
+      .title {
+        text-align: center;
         color: #fff;
       }
-      .el-menu-item.is-active{
-        color: #374b1e;
-        border-left: 6px solid #374b1e;
-      }
-      .el-menu-item:hover{
-        border-left: 6px solid #628634;
+      .name {
+        text-align: center;
+        color: #fff;
       }
     }
-  }
-  .el-main {
-    background-color: #dde2d7;
-    color: #333;
-    .el-col.title{
-      margin-top: 10px;
-      padding: 0 10px;
-      background: #374b1e;
-      color: #fff;
-      line-height: 36px;
-      span{
-        display: inline-block;
-        float: right;
+    &:nth-child(2){
+      background: #9260bf;
+      .title{
+        margin-top: 0;
+        h1{
+          text-align: center;
+          color: #fff;
+          font-weight: normal;
+          font-size: 3rem;
+        }
       }
-    }
-    .el-col.summary{
-      margin-top: 10px;
-      padding: 0 10px;
-      background: #91a17d;
-      color: #fff;
-      line-height: 30px;
-    }
-    .el-col.summary_content{
-      font-size: 14px;
-      padding: 10px;
-      text-indent: 2em;
-      p{
-        line-height: 18px;
-        margin: 8px 0;
-      }
-    }
-    .summary_param{
-      font-size: 14px;
-      padding: 0 10px;
-      div{
-        margin-top: 5px;
-        line-height: 30px;
-      }
-      div:first-child{
-        border-bottom: 1px solid #ccc;
+      .discription{
+        color: #fff;
+        float: left;
+        margin-top: 2rem;
+        font-size: 1.2rem;
+        min-width: 220px;
+        margin-left: 50%;
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+        transform: translateX(-50%);
         span{
-          display: inline-block;
-          width: 33%;
-          float: left;
-          font-weight: bold;
+          color: #51207d;
+        }
+      }
+    }
+    &:nth-child(3){
+      background: #ffbf51;
+      .title{
+        margin-top: 0;
+        h1{
+          text-align: center;
+          color: #fff;
+          font-weight: normal;
+          font-size: 3rem;
+        }
+      }
+      .discription{
+        width: 90%;
+        margin: 20px auto;
+        &>div{
+          border-left: 1px solid #e28100;
+          height: 5rem;
+          width: 50%;
+          float: right;
+          position: relative;
+          p{
+            padding: 0;
+            margin: 0;
+          }
+          div{
+            margin-top: -9px;
+            padding: 0 1rem;
+            color: #fff;
+            font-size: 1rem;
+          }
+          span{
+            display: inline-block;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 18px;
+            color: #fff;
+            background: #e28100;
+            position: absolute;
+            top: -9px;
+            left: -9px;
+          }
+          &:nth-child(2){
+            float: left;
+            border-left: 0;
+            text-align: right;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            border-right: 1px solid #e28100;
+            span{
+              left: auto;
+              right: -9px;
+            }
+          }
           &:last-child{
-            color: #aaa;
+            border-left-color: #ffbf51;
           }
         }
       }
     }
-    .summary_eg{
-      font-size: 14px;
-      div{
-        margin: 10px 0;
-      }
-      .summary_eg_summary{
-        padding-left: 8px;
-        border-left: 4px solid $color-primary;
-      }
-      .summary_eg_title{
-        color: #54752c;
-      }
-      .summary_eg_block{
-        border: 1px dotted #54752c;
-        padding: 10px;
+    
+    .illustration{
+      width: 70%;
+      margin: 0 auto;
+      img{
+        width: 100%;
       }
     }
-    
-  }
-  
-  body > .el-container {
-    margin-bottom: 40px;
-  }
-  
-  .el-container:nth-child(5) .el-aside,
-  .el-container:nth-child(6) .el-aside {
-    line-height: 260px;
-  }
-  
-  .el-container:nth-child(7) .el-aside {
-    line-height: 320px;
+    .photo-animate {
+      -webkit-animation: topshow 1s linear;
+      -o-animation: stopshow 1s linear;
+      animation: topshow 1s linear;
+    }
+    .character-animate {
+      -webkit-animation: bottomshow 1s linear;
+      -o-animation: bottomshow 1s linear;
+      animation: bottomshow 1s linear;
+    }
+    @keyframes topshow {
+      0% {
+        -webkit-transform: translateY(-10rem);
+        -moz-transform: translateY(-10rem);
+        -ms-transform: translateY(-10rem);
+        -o-transform: translateY(-10rem);
+        transform: translateY(-10rem);
+        opacity: 0;
+      }
+      100% {
+        -webkit-transform: translateX(0);
+        -moz-transform: translateX(0);
+        -ms-transform: translateX(0);
+        -o-transform: translateX(0);
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+    @keyframes bottomshow {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
   }
 </style>
